@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="./pg.css">
+</head>
+<body>
+    <div class="main">    
+        <h1>Score Page</h1>
+        <div class="score"></div>
+        <div id="result"></div>
+        <a href="game.html">
+            <button class="custom-btn btn-6"><span>Retry</span></button></a>
+            <a class="custom-btn" href="Index.html"><button><span>Home</span></button></a>
+</div>
+<script>
+    const score = localStorage.getItem('score');
+const result = document.querySelector('#result');
+const scoreDisplay = document.querySelector('.score');
+
+const unsafePhrases = [
+  'You should reconsider your life choices.',
+  'Is this the best you can do? Pathetic!',
+  'Maybe Minesweeper is not your game.',
+  'You lost again? How surprising.',
+  'Your brain must be as empty as this minefield.'
+  // Add more psychologically unsafe phrases as needed
+];
+const safePhrases = [
+  'Congratulations on playing Minesweeper!',
+  'You gave it a good try! Keep it up!',
+  'Every failure is a step towards success.',
+  'You are learning and improving. Great effort!',
+  'Minesweeper can be challenging, but you are doing well!'
+  // Add more positive and encouraging phrases as needed
+];
+
+const music3 = new Audio('./audio/Freaks.mp3')
+
+const music4 = new Audio('./audio/Scam.mp3')
+
+
+if (score === null) {
+  // Display a random psychologically unsafe phrase
+  const randomPhrase = unsafePhrases[Math.floor(Math.random() * unsafePhrases.length)];
+  result.innerHTML = `<br>${randomPhrase}`;
+  music3.play();
+  music3.loop = true;
+
+} else {
+  // Display the score
+  const randomPhrase = safePhrases[Math.floor(Math.random() * safePhrases.length)];
+  scoreDisplay.innerHTML = `
+  <br>${randomPhrase}
+  <br>
+  Score: ${score}`;
+  music4.play();
+  music4.loop = true;
+}
+
+
+</script>
+</body>
+</html>

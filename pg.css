@@ -1,0 +1,117 @@
+body{
+    background-color: rgba(33,32,33,255);
+    /* background: linear-gradient(120deg, rgb(143, 58, 58), rgb(224, 215, 215),rgb(18, 78, 96)); */
+        color: white;
+        display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    height: 45vh;
+    width: 60vh;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    margin-top: 13%;
+}
+
+button{
+    padding: 10px;
+    width: 100px;
+    margin-top:20px;
+    border-radius: 7px;
+    border: 1px solid white;
+    background-color: rgba(33,32,33,255);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+
+.btn-6 {
+    background: rgb(247,150,192);
+    background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    }
+    .btn-6 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    }
+    .btn-6:before,
+    .btn-6:after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 1px;
+    box-shadow:
+    -1px -1px 20px 0px rgba(255,255,255,1),
+    -4px -4px 5px 0px rgba(255,255,255,1),
+    7px 7px 20px 0px rgba(0,0,0,.4),
+    4px 4px 5px 0px rgba(0,0,0,.3);
+    }
+    .btn-6:before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+    }
+    .btn-6:after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+    }
+    .btn-6:hover{
+    background: transparent;
+    color: #76aef1;
+    box-shadow: none;
+    }
+    .btn-6:hover:before {
+    transition: all 500ms ease;
+    height: 100%;
+    }
+    .btn-6:hover:after {
+    transition: all 500ms ease;
+    height: 100%;
+    }
+    .btn-6 span:before,
+    .btn-6 span:after {
+    position: absolute;
+    content: "";
+    box-shadow:
+    -1px -1px 20px 0px rgba(255,255,255,1),
+    -4px -4px 5px 0px rgba(255,255,255,1),
+    7px 7px 20px 0px rgba(0,0,0,.4),
+    4px 4px 5px 0px rgba(0,0,0,.3);
+    }
+    .btn-6 span:before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+    }
+    .btn-6 span:after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+    }
+    .btn-6 span:hover:before {
+    width: 100%;
+    }
+    .btn-6 span:hover:after {
+    width: 100%;
+    }
+    
